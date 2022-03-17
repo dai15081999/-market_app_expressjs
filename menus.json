@@ -1,0 +1,66 @@
+[{
+    "_id": {
+      "$oid": "5eee651f739f8c674fd736ee"
+    },
+    "name": "Iphone20 vippromax",
+    "image": "iphone.jpg",
+    "price": 50000,
+    "brand": "Apple"
+  },{
+    "_id": {
+      "$oid": "5eee6671a27a66807cf2bea3"
+    },
+    "name": "Bò húc",
+    "image": "bohuc.jpg",
+    "price": 120000,
+    "brand": "Number one"
+  },{
+    "_id": {
+      "$oid": "5eee6692a27a66807cf2bea4"
+    },
+    "name": "Xe tăng T42",
+    "image": "xetang.jpg",
+    "price": 13000,
+    "brand": "BBG"
+  },{
+    "_id": {
+      "$oid": "5eee66a5a27a66807cf2bea5"
+    },
+    "name": "Bom nguyên tử",
+    "image": "bom.jpg",
+    "price": 300000,
+    "brand": "Shoppe"
+  },{
+    "_id": {
+      "$oid": "5eee66c4a27a66807cf2bea6"
+    },
+    "name": "Máy bay B52",
+    "image": "b52.jpg",
+    "price": 31000,
+    "brand": "lazada"
+  },{
+    "_id": {
+      "$oid": "5eee66cfa27a66807cf2bea7"
+    },
+    "name": "Thịt chó 7 món",
+    "image": "thitcho.jpg",
+    "price": 30005,
+    "brand": "tiki"
+  },{
+    "_id": {
+      "$oid": "5eee66eea27a66807cf2bea8"
+    },
+    "name": "Thuốc sâu",
+    "image": "ts.jpg",
+    "price": 4200000,
+    "brand": "Hihi"
+  },{
+    "_id": {
+      "$oid": "5eee6717a27a66807cf2bea9"
+    },
+    "name": "Bánh gato",
+    "image": "gato.jpg",
+    "price": 4000000,
+    "brand": "cake shop"
+  }]
+  
