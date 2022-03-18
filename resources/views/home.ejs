@@ -19,23 +19,28 @@
   <h1 class="text-xl font-bold mb-8">Sản phẩm:</h1>
   <div class="grid grid-cols-4 col-gap-12 row-gap-16">
     <% products.forEach(function(product) { %>
-      <div class="w-64">
-        <img class="h-40 mb-4 mx-auto" src="/img/<%= product.image %>" alt="" />
-        <div class="text-center">
-          <h2 class="mb-4 text-lg"><%= product.name %></h2>
-          <span class="size py-1 px-4 rounded-full uppercase text-xs"><%= product.brand %></span>
-          <div class="flex items-center justify-around mt-6">
-            <span class="font-bold text-lg">$<%= product.price %></span>
-            <button
-              data-product="<%= JSON.stringify(product) %>"
-              class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
-            >
-              <span>+</span>
-              <span class="ml-4">Thêm</span>
-            </button>
-          </div>
+    <div class="w-64">
+      <img class="h-40 mb-4 mx-auto" src="/img/<%= product.image %>" alt="" />
+      <div class="text-center">
+        <h2 class="mb-4 text-lg"><%= product.name %></h2>
+        <span class="size py-1 px-4 rounded-full uppercase text-xs"
+          ><%= product.brand %></span
+        >
+        <div class="flex items-center justify-around mt-6">
+          <span class="price font-bold text-lg"
+            ><%= new Intl.NumberFormat('en-US', { style: 'currency', currency:
+            'USD', }).format(product.price) %></span
+          >
+          <button
+            data-product="<%= JSON.stringify(product) %>"
+            class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
+          >
+            <span>+</span>
+            <span class="ml-4">Thêm</span>
+          </button>
         </div>
       </div>
-   <% }) %>
+    </div>
+    <% }) %>
   </div>
 </section>

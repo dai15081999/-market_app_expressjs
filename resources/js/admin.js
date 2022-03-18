@@ -34,7 +34,8 @@ export default function initAdmin(socket) {
   }
 
   function generateMarkup(orders) {
-    return orders.map((order) => {
+    return orders
+      .map((order) => {
         return `
         <tr>
         <td class="border px-4 py-2 text-green-900">
@@ -50,9 +51,7 @@ export default function initAdmin(socket) {
                   <select name="status" onchange="this.form.submit()"
                       class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                       <option value="order_placed"
-                          ${
-                            order.status === "order_placed" ? "selected" : ""
-                          }>
+                          ${order.status === "order_placed" ? "selected" : ""}>
                           Đã đặt</option>
                       <option value="confirmed" ${
                         order.status === "confirmed" ? "selected" : ""
@@ -87,7 +86,7 @@ export default function initAdmin(socket) {
             ${moment(order.createdAt).format("hh:mm A")}
         </td>
         <td class="border px-4 py-2">
-            ${order.paymentStatus ? "paid" : "Not paid"}
+            ${order.paymentStatus ? "Đã thanh toán" : "Chưa thanh toán"}
         </td>
     </tr>
         `;
@@ -95,15 +94,15 @@ export default function initAdmin(socket) {
       .join("");
   }
 
-  socket.on('orderPlaced', (order) => {
+  socket.on("orderPlaced", (order) => {
     new Noty({
       type: "success",
       timeout: 1000,
       text: "Đã có đơn mới!",
       progressBar: false,
-    }).show()
-    orders.unshift(order)
-    orderTableBody.innerHTML = ''
-    orderTableBody.innerHTML = generateMarkup(orders)
-    })
+    }).show();
+    orders.unshift(order);
+    orderTableBody.innerHTML = "";
+    orderTableBody.innerHTML = generateMarkup(orders);
+  });
 }
